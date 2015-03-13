@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <!-- Bootstrap -->
+    <link href="src/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="src/bootstrap/js/bootstrap.min.js"></script>
+    <script src="src/angular.js"></script>
+    <script src="app/app.js"></script>
+</head>
+<body ng-controller="mainCtrl">
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">.col-md-8</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+</div>
+
+
+<p>Nothing here {{'yet' + '!'}}</p>
+{{test}}
+{{langs}}
+{{language}}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">Language</div>
+        <div class="col-md-8">
+            <select class="form-control" ng-options="lang for lang in langs" ng-model="language" ng-change="loadAreas()"></select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">Area</div>
+        <div class="col-md-8">
+            <select class="form-control" ng-options="area.AreaName for area in areas" ng-model="area" ng-change="loadLocations()">
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">Location</div>
+        <div class="col-md-8">
+            <select class="form-control" ng-options="location.LocationName for location in locations" ng-model="location">
+            </select>
+        </div>
+    </div>
+</div>
+
+
+<table class="table">
+    <tr>
+        <td>111</td>
+    </tr>
+    <tr>
+        <td>222</td>
+    </tr>
+</table>
+
+</body>
+</html>
